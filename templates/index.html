@@ -1,0 +1,22 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Video Editing Website</title>
+</head>
+<body>
+<h1>Video Editing Website</h1>
+<form action="/" method="post" enctype="multipart/form-data">
+<input type="file" name="video">
+<input type="submit" value="Upload">
+</form>
+<ul>
+{% for video in videos %}
+<li><a href="/edit/{{ video.id }}">{{ video.filename }}</a></li>
+{% endfor %}
+</ul>
+</body>
+</html>
+
+
